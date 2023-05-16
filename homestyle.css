@@ -1,0 +1,353 @@
+/* *{
+    border: solid black;
+} */
+body{
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed';
+
+}
+.body{
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    margin-top: -0.2em;
+    padding-left: 13em;
+    padding-right: 13em;
+    justify-content: center;
+}
+.top{
+    padding-left: 13em;
+    padding-right: 13em;    
+    background-color: rgb(255, 252, 252);
+
+}
+.header{
+    display: flex;
+    padding: 0em;
+    margin: 0;
+    height: 80px;
+    justify-content: space-between;
+    vertical-align: middle;
+    box-shadow: 20px;
+}
+.logo{
+    margin:0;
+    margin-top: 0.45em;
+    padding: 0em;
+    justify-content: flex-start;
+}
+.logo img{
+    height: 70px;
+    width: 120px;
+}
+.heading{
+    justify-content: center;
+    vertical-align: top;
+    height: 70px;
+    margin: 0px;
+    margin-top: 0.03em;
+    padding: 0em;
+    font-size: 30px;
+    font-family: 'Roboto Mono';
+    word-spacing: -0.3em;
+    font-weight: 900;
+    letter-spacing: -3.9px;
+}
+.heading h1{
+    margin: 0px;
+}
+.anchor{
+    justify-content: flex-end;
+    margin:0;
+    font-size: 30px;
+    font-family: 'Roboto Mono';
+    margin-top: 0.8em;
+    word-spacing: -0.3em;
+    font-weight: 200;
+    letter-spacing: -3.9px;
+}
+.anchor a{
+    text-decoration: none;
+    color: inherit;
+}
+hr{
+    border:none;
+    height: 55px;
+    margin-top: 0;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -22px #333;
+    margin: -50px auto 10px; 
+}
+.content{
+    padding-top: 0.5em;
+    font-size: 17px;
+    padding-bottom: 0;
+    margin: 0;
+}
+.content h1{
+    margin-bottom: 0.1em;
+    font-size: 40px;
+    font-family: 'Source Sans Pro';
+}
+.content p{
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+}
+
+
+/* Dropdown */
+details {
+	position: relative;
+	width: 200px;
+    font-size: 20px;
+	margin-right: 1rem;
+}
+details[open] {
+	z-index: 1;
+}
+
+summary {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #e7e4e4;
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary:before {
+	content: '';
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+summary:after {
+	content: '';
+	display: inline-block;
+	float: right;
+	width: .5rem;
+	height: .5rem;
+    margin-top: 7px;
+	border-bottom: 1px solid currentColor;
+	border-left: 1px solid currentColor;
+	border-bottom-left-radius: 2px;
+	transform: rotate(45deg) translate(50%, 0%);
+	transform-origin: center center;
+	transition: transform ease-in-out 100ms
+}
+
+summary:focus {
+	outline: none;
+}
+
+details[open] summary:after {
+	transform: rotate(-45deg) translate(0%, 0%);
+}
+
+ul {
+	width: 100%;
+	background: #e7e4e4;
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+	margin-left: 5px;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+li:first-child {
+	padding-top: 0;
+}
+li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+/* FAKE SELECT */
+summary.radios {
+	counter-reset: radios;
+}
+summary.radios:before {
+	content: var(--selection);
+}
+input[type=radio] {
+	counter-increment: radios;
+	appearance: none;
+	display: none;
+}
+input[type=radio]:checked {
+	display: inline;
+	--display: block;
+}
+input[type=radio]:after {
+	content: attr(title);
+	display: inline;
+	font-size: 18.5px;
+}
+ul.list {
+	counter-reset: labels;
+}
+label {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	justify-content: space-between;
+}
+label span {
+	--display: none;
+	display: var(--display);
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid #727272;
+	border-radius: 3px;
+}
+
+.language{
+    display: flex;
+    justify-content: center;
+}
+.lang{
+    font-size: 18px;
+    font-family: 'Source Sans Pro';
+    padding-right: 2em;
+}
+.dropdown{
+    margin-top: 19px;
+}
+.mainpart{
+    justify-content: center;
+    font-size: 17.055px;
+    padding-right: 2em;
+}
+.mainpart h1{
+    font-family: 'Source Sans Pro';
+}
+.cent{
+    text-align: center;
+}
+.input{
+    border-radius: 20px;
+	border: 1px solid #727272;
+    box-shadow: 0 15px 10px -20px #333;
+    margin: -50px auto 10px; 
+    font-size: 25px;
+    margin: 8px;
+    padding: 10px;
+}
+
+/* Upload */
+form{
+    height: 227px;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 0;
+    background-color: #f8f8f8;
+  }
+  form p{
+    margin: 0;
+    width: 100%;
+    font-family: monospace;
+    height: 100%;
+    color: #616060;
+    line-height: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  form input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+  }
+ .im{
+    padding-top: 25px;
+    text-align: center;
+ }
+
+
+/* TextArea */
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    height: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 20px;
+    resize: none;
+    line-height: 190px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Audio */
+
+/*Buttons  */
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.downbutton{
+    border-radius: 20px;
+	border: 1px solid #727272;
+    box-shadow: 0 15px 10px -20px #333;
+    margin: -50px auto 10px; 
+    font-size: 23px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+} 
+#clear{
+    margin-left: 0;
+}
+/*Footer*/
+.footer{
+    margin: 0;
+    padding-left: 20.5em;
+    padding-right: 20.5em;
+    font-size: 10px;
+    font-weight: 0;
+    background-color: black;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.footer h1{
+    padding: 5px;
+    margin: 0;
+    padding-top: 1.2em;
+}
+.footer h2{
+    font-size: 19px;
+    padding: 5px;
+    margin: 0;
+    padding-bottom: 1.55em;
+}
