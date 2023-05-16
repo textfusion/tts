@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Text to Speech</title>
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="homestyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+</head>
+<body>
+    <div class="top">
+        <div class="header">
+            <div class="logo"><a href="https://www.iiitkottayam.ac.in/"><img src="logo.jpg" alt="Logo"></a></div>
+            <div class="heading"><h1>Indian Text to Speech</h1></div>
+            <div class="anchor"><a href="aboutus.html">About us</a></div>
+        </div>
+        
+    </div>
+    <hr>
+    <div class="body">
+        <div class="content">
+            <h1>About the website</h1>
+            <p>Welcome to our website, where you can convert Indian language text or documents (Word/PDF) into speech using our API. Please note that our website is currently under development. To get started, please select the desired language and mode for submitting your data from the options below.</p>
+        </div>
+        <br><br>
+        <div class="language">
+            <div class="lang"><h1>Select the language</h1></div>
+            <div class="dropdown"><details class="custom-select">
+                <summary class="radios">
+                    <input type="radio" name="item" id="English" title="English" checked>
+                    <input type="radio" name="item" id="Hindi" title="Hindi">
+                    <input type="radio" name="item" id="Kannada" title="Kannada">
+                    <input type="radio" name="item" id="Telugu" title="Telugu">
+                </summary>
+                <ul class="list">
+                    <li>
+                        <label for="English">English</label>
+                    </li>
+                    <li>
+                        <label for="Hindi">Hindi</label>
+                    </li>
+                    <li>
+                        <label for="Kannada">Kannada</label>
+                    </li>
+                    <li>
+                        <label for="Telugu">Telugu</label>
+                    </li>
+                </ul>
+            </details>
+        </div></div>
+        <br>
+        <div class="mainpart">
+            <div class="option"><h1>Please select one of the following methods to convert your text into speech.</h1></div>
+            <div class="cent">&emsp;<button class="input" onclick="TextBox()">Text Input</button>&emsp13;&emsp13;<button class="input" onclick="UploadBar()">File Upload</button></div>
+            <br>
+            <div id="txt" style="display:block">
+                <textarea name="Text" id="Text" cols="55" rows="100" placeholder="Enter the desired text for conversion." ></textarea>
+                <br><br>
+                <div class="buttons">
+                    <button class="downbutton" id="clear" onclick="Erase()">Clear</button>
+                    <button class="downbutton">Synthesis</button>
+                </div>
+                <br>
+            </div>
+            <!--Here comes the box change using javascript-->
+            <div id="upload" style="display:none">
+                <form>
+                <input type="file" onchange="getFileName(this);" id="upload-files">
+                <div class="im" style="display:block" id="im"><img src="upload.png" width="190px" height="120px"></div>
+                <p id="para">Drag your files here or click in this area.</p>
+                </form>
+                <br>
+                <div class="buttons">
+                    <button class="downbutton" onclick="reseti()">Clear</button>
+                    <button type="submit" class="downbutton" onclick="alert(6);">Synthesis</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <h1>Made by Md Sameer Pasha and Mohammed Aslam</h1>
+            <h2>Guided by Dr Gangireddy Narendra Kumar</h2>
+        </div>
+    
+</body>
+</html>
