@@ -35,7 +35,7 @@ function textSyn(){
 function pdfSyn() {
   let text;
   // Get the selected file from the input element
-  const selectedFile = document.getElementById("psdFile").files[0];
+  const selectedFile = document.getElementById("pdfFile").files[0];
   
   // Create a new FileReader to read the selected file
   const reader = new FileReader();
