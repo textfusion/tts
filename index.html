@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title>Indian Text to Speech</title>
     <script src="home.js"></script>
+    <script src="tts.js"></script>
     <link rel="stylesheet" href="homestyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
@@ -52,28 +52,29 @@
         <br>
         <div class="mainpart">
             <div class="option"><h1>Please select one of the following methods to convert your text into speech.</h1></div>
+            
             <div class="cent">&emsp;<button class="input" onclick="TextBox()">Text Input</button>&emsp13;&emsp13;<button class="input" onclick="UploadBar()">File Upload</button></div>
             <br>
             <div id="txt" style="display:block">
-                <textarea name="Text" id="Text" cols="55" rows="100" placeholder="Enter the desired text for conversion." ></textarea>
+                <textarea name="Text" id="textToSyn" cols="55" rows="100" placeholder="Enter the desired text for conversion." ></textarea>
                 <br><br>
                 <div class="buttons">
                     <button class="downbutton" id="clear" onclick="Erase()">Clear</button>
-                    <button class="downbutton">Synthesis</button>
+                    <button class="downbutton" onclick="textSyn()">Synthesis</button>
                 </div>
                 <br>
             </div>
             <!--Here comes the box change using javascript-->
             <div id="upload" style="display:none">
                 <form>
-                <input type="file" onchange="getFileName(this);" id="upload-files">
+                <input type="file" onchange="getFileName(this);" id="pdfFile">
                 <div class="im" style="display:block" id="im"><img src="upload.png" width="190px" height="120px"></div>
                 <p id="para">Drag your files here or click in this area.</p>
                 </form>
                 <br>
                 <div class="buttons">
                     <button class="downbutton" onclick="reseti()">Clear</button>
-                    <button type="submit" class="downbutton" onclick="alert(6);">Synthesis</button>
+                    <button type="submit" class="downbutton" onclick="pdfSyn()">Synthesis</button>
                 </div>
                 <br>
             </div>
@@ -83,6 +84,5 @@
             <h1>Made by Md Sameer Pasha and Mohammed Aslam</h1>
             <h2>Under the guidance of Dr Gangireddy Narendra Kumar</h2>
         </div>
-    
+
 </body>
-</html>
