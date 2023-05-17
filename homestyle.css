@@ -43,12 +43,12 @@ body{
 }
 .heading{
     justify-content: center;
-    vertical-align: top;
+    vertical-align: middle;
     height: 70px;
     margin: 0px;
-    margin-top: 0.03em;
+    margin-top: 0.14em;
     padding: 0em;
-    font-size: 30px;
+    font-size: 27px;
     font-family: 'Roboto Mono';
     word-spacing: -0.3em;
     font-weight: 900;
@@ -57,7 +57,18 @@ body{
 .heading h1{
     margin: 0px;
 }
-.anchor{
+
+.anchor img{
+    margin:0;
+    margin-top: 0.45em;
+    padding: 0em;
+    justify-content: flex-end;
+    height: 77.5px;
+    width: 120px;
+}
+
+/* earlier was for about us */
+/* .anchor{
     justify-content: flex-end;
     margin:0;
     font-size: 30px;
@@ -70,7 +81,7 @@ body{
 .anchor a{
     text-decoration: none;
     color: inherit;
-}
+} */
 hr{
     border:none;
     height: 55px;
@@ -330,9 +341,9 @@ textarea {
 /*Footer*/
 .footer{
     margin: 0;
-    padding-left: 20.5em;
-    padding-right: 20.5em;
-    font-size: 10px;
+    padding-left: 20em;
+    padding-right: 18.5em;
+    font-size: 10.2px;
     font-weight: 0;
     background-color: black;
     color: white;
@@ -343,11 +354,12 @@ textarea {
 .footer h1{
     padding: 5px;
     margin: 0;
-    padding-top: 1.2em;
+    padding-top: 1.1em;
+    padding-bottom: 0.1em;
 }
 .footer h2{
     font-size: 19px;
     padding: 5px;
     margin: 0;
-    padding-bottom: 1.55em;
+    padding-bottom: 1.3em;
 }
