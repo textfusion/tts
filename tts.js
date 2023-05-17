@@ -2,29 +2,28 @@
 // const { text } = require("body-parser");
 const speech = new SpeechSynthesisUtterance();
 speech.lang = "en";
-var flag = 0;
+// var flag = 0;
 
 
 
-function setFlag(){
-  flag = 1;
-}
+// function setFlag(){
+//   flag = 1;
+// }
 
 
-function diverge(){
-  alert("in diverge fun "  + flag);
-  if(flag == 1){
-    alert("going to pdf");
-    pdfSyn();
-  }else{
-    alert("going to text");
-    textSyn();
-  }
-}
+// function diverge(){
+//   alert("in diverge fun "  + flag);
+//   if(flag == 1){
+//     alert("going to pdf");
+//     pdfSyn();
+//   }else{
+//     alert("going to text");
+//     textSyn();
+//   }
+// }
 
 
 function textSyn(){
-        alert("texthi");
         speech.text = document.getElementById("textToSyn").value;
         console.log(document.getElementById("textToSyn").value);
         window.speechSynthesis.speak(speech);
@@ -34,10 +33,9 @@ function textSyn(){
 
 
 function pdfSyn() {
-  alert("hi");
   let text;
   // Get the selected file from the input element
-  const selectedFile = document.getElementById('upload-files').files[0];
+  const selectedFile = document.getElementById("psdFile").files[0];
   
   // Create a new FileReader to read the selected file
   const reader = new FileReader();
