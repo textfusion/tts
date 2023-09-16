@@ -7,10 +7,10 @@ function TextBox(){
     document.getElementById("txt").style.display = "block";
 }
 function Erase(){
-    document.getElementById("Text").value = "";
+    document.getElementById("textToSyn").value = "";
 }
 function reseti(){
-    document.getElementById("upload-files").value = "";
+    document.getElementById("pdfFile").value = "";
     document.getElementById("para").innerHTML="Drag your files here or click in this area.";
     document.getElementById("im").style.display="";
     document.getElementById("para").style.lineHeight = "10px";
