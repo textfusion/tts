@@ -30,6 +30,7 @@ function stopSpeech(){
 function selectedLang(lang){
   // alert(lang);
   // document.getElementsByClassName("list").style.display = "none";
+  document.getElementById("listdropdown").style.display = "none";
   if(lang === 'English'){
     speech.lang = "en-US";
   }else if(lang === 'Hindi'){
