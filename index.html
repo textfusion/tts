@@ -27,7 +27,7 @@
     <div class="body">
         <div class="content">
             <h1>About the website</h1>
-            <p>Welcome to our website, where you can convert Indian language text or documents (Word/PDF) into speech using our API. Please note that our website is currently under development. To get started, please select the desired language and mode for submitting your data from the options below.</p>
+            <p>Welcome to our website, where you can convert Indian language text or documents (PDF) into speech using our API. To get started, please select the desired language and mode for submitting your data from the options below.</p>
         </div>
         <br><br>
         <div class="language">
@@ -40,16 +40,16 @@
                     <input type="radio" name="item" id="Telugu" title="Telugu">
                 </summary>
                 <ul class="list">
-                    <li>
+                    <li onclick="selectedLang('English')">
                         <label for="English">English</label>
                     </li>
-                    <li>
+                    <li onclick="selectedLang('Hindi')">
                         <label for="Hindi">Hindi</label>
                     </li>
-                    <li>
+                    <li onclick="selectedLang('Kannada')">
                         <label for="Kannada">Kannada</label>
                     </li>
-                    <li>
+                    <li onclick="selectedLang('Telugu')">
                         <label for="Telugu">Telugu</label>
                     </li>
                 </ul>
@@ -62,7 +62,7 @@
             <div class="cent">&emsp;<button class="input" onclick="TextBox()">Text Input</button>&emsp13;&emsp13;<button class="input" onclick="UploadBar()">File Upload</button></div>
             <br>
             <div id="txt" style="display:block">
-                <textarea name="Text" id="textToSyn" cols="55" rows="100" placeholder="Enter the desired text for conversion." ></textarea>
+                <textarea name="Text" id="textToSyn" cols="55" rows="100" placeholder="Enter the desired text for conversion." oninput="adjustLineHeight()"></textarea>
                 <br><br>
                 <div class="buttons">
                     <button class="downbutton" id="clear" onclick="Erase()">Clear</button>
