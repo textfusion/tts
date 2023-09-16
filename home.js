@@ -6,9 +6,13 @@ function TextBox(){
     document.getElementById("upload").style.display = "none";
     document.getElementById("txt").style.display = "block";
 }
+document.getElementById("clear").addEventListener("click", Erase);
 function Erase(){
     document.getElementById("textToSyn").value = "";
 }
+
+document.getElementById("clearFile").addEventListener("click", reseti);
+function reseti(){
 function reseti(){
     document.getElementById("pdfFile").value = "";
     document.getElementById("para").innerHTML="Drag your files here or click in this area.";
