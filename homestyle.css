@@ -303,8 +303,7 @@ form{
 
 textarea {
     width: 100%;
-    height: 150px;
-    padding: 12px 20px;
+    padding: 12px 15px;
     height: 230px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -312,9 +311,22 @@ textarea {
     background-color: #f8f8f8;
     font-size: 20px;
     resize: none;
-    line-height: 190px;
-    text-align: center;
+    
     margin: 0;
+}
+textarea:focus{
+    text-align: left;
+}
+/* textarea::content{
+    transform: translateY(85px);
+} */
+textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+textarea::placeholder {
+    text-align: center;
+    transform: translateY(85px);
 }
 
 /* Audio */
