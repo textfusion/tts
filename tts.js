@@ -21,6 +21,11 @@ const speech = new SpeechSynthesisUtterance();
 //     textSyn();
 //   }
 // }
+document.getElementById("clear").addEventListener("click", stopSpeech);
+document.getElementById("clearFile").addEventListener("click", stopSpeech);
+function stopSpeech(){
+  window.speechSynthesis.cancel();
+}
 
 function selectedLang(lang){
   // alert(lang);
