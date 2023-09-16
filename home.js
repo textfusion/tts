@@ -6,13 +6,13 @@ function TextBox(){
     document.getElementById("upload").style.display = "none";
     document.getElementById("txt").style.display = "block";
 }
+
 document.getElementById("clear").addEventListener("click", Erase);
 function Erase(){
     document.getElementById("textToSyn").value = "";
 }
 
 document.getElementById("clearFile").addEventListener("click", reseti);
-function reseti(){
 function reseti(){
     document.getElementById("pdfFile").value = "";
     document.getElementById("para").innerHTML="Drag your files here or click in this area.";
@@ -26,3 +26,15 @@ function getFileName(myFile){
     document.getElementById("para").innerHTML=filename+" is selected";
     document.getElementById("im").style.display="none";
 }
+
+// function adjustLineHeight(){
+//     var textarea = document.getElementById("textToSyn");
+//     var len  = document.getElementById("textToSyn").value.length;
+//     if(len>0){
+//         textarea.style.lineHeight = "normal";
+//     }
+//     else{
+//         textarea.style.lineHeight = "190px";
+//     }
+        
+// }
