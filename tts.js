@@ -1,7 +1,7 @@
 
 // const { text } = require("body-parser");
 const speech = new SpeechSynthesisUtterance();
-speech.lang = "en";
+// speech.lang = "en";
 // var flag = 0;
 
 
@@ -21,6 +21,20 @@ speech.lang = "en";
 //     textSyn();
 //   }
 // }
+
+function selectedLang(lang){
+  // alert(lang);
+  // document.getElementsByClassName("list").style.display = "none";
+  if(lang === 'English'){
+    speech.lang = "en-US";
+  }else if(lang === 'Hindi'){
+    speech.lang = "hi-IN";
+  }else if(lang === 'Kannada'){
+    speech.lang = "kn-IN";
+  }else if(lang === 'Telugu'){
+    speech.lang = "te-IN";
+  }
+}
 
 
 function textSyn(){
